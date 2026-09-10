@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prudence Noncolela - About Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-wrapper {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .top-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            background: rgba(30, 58, 138, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .info-card h3 {
+            color: #38bdf8;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        .timeline-item {
+            padding-left: 20px;
+            margin-bottom: 20px;
+            border-left: 3px solid #10b981;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .year-tag {
+            background-color: #f97316;
+            color: #ffffff;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Certifications Grid */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        .cert-card {
+            background-color: rgba(30, 58, 138, 0.35);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: left;
+        }
+        .cert-card h4 {
+            margin: 0 0 6px 0;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+        .cert-card p {
+            margin: 0;
+            font-size: 0.82rem;
+            color: var(--text-body, #cbd5e1);
+        }
+
+        /* Tech Stack Filters */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            background: rgba(30, 58, 138, 0.4);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--text-heading, #ffffff);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        .tab-btn.active {
+            background-color: #38bdf8;
+            border-color: #38bdf8;
+            color: #0f172a;
+            font-weight: bold;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .tech-card {
+            background-color: rgba(30, 58, 138, 0.35);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--text-heading, #ffffff);
+        }
+        .tech-card.hidden {
+            display: none !important;
+        }
+
+        body.light-mode .info-card,
+        body.light-mode .cert-card,
+        body.light-mode .tech-card {
+            background-color: #ffffff;
+            border-color: #cbd5e1;
+            color: #0f172a;
+        }
+        body.light-mode .cert-card h4 {
+            color: #0f172a;
+        }
+        body.light-mode .tab-btn {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            color: #334155;
+        }
+        body.light-mode .tab-btn.active {
+            background-color: #f97316;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><span style="color: #f97316;">Prudence</span> Noncolela</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Me</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-btn">🟡 Light Mode</button>
+    </header>
+
+    <main class="about-wrapper">
+        <!-- Profile & Mission Cards -->
+        <div class="top-cards">
+            <div class="info-card">
+                <h3>🧑‍💻 Profile</h3>
+                <p style="color: var(--text-body); margin: 0;">ICT Applications Development student applying software engineering principles to build efficient, scalable digital solutions.</p>
+            </div>
+            <div class="info-card">
+                <h3 style="color: #4ade80;">🎯 Mission</h3>
+                <p style="color: var(--text-body); margin: 0;">To combine robust backend systems, intuitive frontend interfaces, and continuous learning to solve complex computational problems.</p>
+            </div>
+        </div>
+
+        <!-- Academic Background Section -->
+        <div style="margin-bottom: 25px;">
+            <h1 style="font-size: 2.2rem; margin-bottom: 8px;">Education & <span style="color: #38bdf8;">Short Courses</span></h1>
+            <p style="color: var(--text-body); margin: 0;">My academic degrees and short courses completed through Samsung Innovation Campus.</p>
+        </div>
+
+        <div class="top-cards">
+            <!-- Academic Qualifications -->
+            <div class="info-card">
+                <h3 style="color: #f97316;">🎓 Academic Qualifications</h3>
+                <div class="timeline-item">
+                    <span class="year-tag" style="background:#10b981;">Current</span>
+                    <h4 style="margin:2px 0;">Advanced Diploma in ICT in Applications Development</h4>
+                    <p style="margin:0; font-size: 0.85rem; color:var(--text-body);">IYunivesithi Walter Sisulu</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="year-tag">Graduated</span>
+                    <h4 style="margin:2px 0;">Diploma in ICT in Applications Development</h4>
+                    <p style="margin:0; font-size: 0.85rem; color:var(--text-body);">IYunivesithi Walter Sisulu</p>
+                </div>
+            </div>
+
+            <!-- Samsung Innovation Campus Short Courses -->
+            <div class="info-card">
+                <h3 style="color: #38bdf8;">📱 Samsung Innovation Campus</h3>
+                <div class="timeline-item">
+                    <span class="year-tag" style="background:#38bdf8; color:#0f172a;">Short Course</span>
+                    <h4 style="margin:2px 0;">Artificial Intelligence Course</h4>
+                    <p style="margin:0; font-size: 0.85rem; color:var(--text-body);">Samsung Innovation Campus</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="year-tag" style="background:#38bdf8; color:#0f172a;">Short Course</span>
+                    <h4 style="margin:2px 0;">Coding and Programming Course</h4>
+                    <p style="margin:0; font-size: 0.85rem; color:var(--text-body);">Samsung Innovation Campus</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Online Certifications Section -->
+        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">📜 Online Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <h4 style="color: #38bdf8;">📊 Data Science Foundations - Level 1[cite: 1]</h4>
+                <p><strong>IBM Skills Network</strong> • Oct 26, 2022[cite: 1]</p>
+                <p style="font-size: 0.75rem; margin-top: 4px; color: #94a3b8;">ID: cde032b5-f591-4a73-86d4-c11de9221bf8[cite: 1]</p>
+            </div>
+            <div class="cert-card">
+                <h4 style="color: #38bdf8;">🛠️ Data Science Tools[cite: 2]</h4>
+                <p><strong>IBM Skills Network</strong> • Oct 27, 2022[cite: 2]</p>
+                <p style="font-size: 0.75rem; margin-top: 4px; color: #94a3b8;">ID: a885b981-a099-48b3-8197-52383915365f[cite: 2]</p>
+            </div>
+            <div class="cert-card">
+                <h4 style="color: #f97316;">⚡ Agile Scrum Master[cite: 4]</h4>
+                <p><strong>Simplilearn SkillUp</strong> • Jul 30, 2025[cite: 4]</p>
+                <p style="font-size: 0.75rem; margin-top: 4px; color: #94a3b8;">Code: 8711231[cite: 4]</p>
+            </div>
+            <div class="cert-card">
+                <h4 style="color: #f97316;">💻 Introduction to ASP.Net[cite: 3]</h4>
+                <p><strong>Simplilearn SkillUp</strong> • Aug 29, 2025[cite: 3]</p>
+                <p style="font-size: 0.75rem; margin-top: 4px; color: #94a3b8;">Code: 8875533[cite: 3]</p>
+            </div>
+            <div class="cert-card">
+                <h4 style="color: #4ade80;">☁️ Azure 304 for Beginners Course[cite: 5]</h4>
+                <p><strong>Simplilearn SkillUp</strong> • Feb 4, 2026[cite: 5]</p>
+                <p style="font-size: 0.75rem; margin-top: 4px; color: #94a3b8;">Code: 9802868[cite: 5]</p>
+            </div>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <h2 style="font-size: 1.8rem; margin-top: 30px; margin-bottom: 15px;">⚡ Tech Stack & Skills</h2>
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filterTech('all', this)">🌐 All</button>
+            <button class="tab-btn" onclick="filterTech('frontend', this)">💻 Frontend</button>
+            <button class="tab-btn" onclick="filterTech('backend', this)">⚙️ Backend</button>
+            <button class="tab-btn" onclick="filterTech('tools', this)">🗄️ Databases & Tools</button>
+        </div>
+
+        <div class="tech-grid">
+            <!-- Frontend -->
+            <div class="tech-card" data-category="frontend">🌐 HTML5 / CSS3</div>
+            <div class="tech-card" data-category="frontend">⚡ JavaScript</div>
+            <div class="tech-card" data-category="frontend">⚛️ React + Vite</div>
+
+            <!-- Backend -->
+            <div class="tech-card" data-category="backend">☕ Java</div>
+            <div class="tech-card" data-category="backend">🐍 Python</div>
+            <div class="tech-card" data-category="backend">🚀 FastAPI</div>
+            <div class="tech-card" data-category="backend">🌶️ Flask</div>
+            <div class="tech-card" data-category="backend">🔴 Laravel</div>
+            <div class="tech-card" data-category="backend">🟦 ASP.Net</div>
+
+            <!-- Databases & Tools -->
+            <div class="tech-card" data-category="tools">🍃 MongoDB</div>
+            <div class="tech-card" data-category="tools">🖥️ XAMPP</div>
+            <div class="tech-card" data-category="tools">💙 VS Code</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prudence Noncolela | <a href="https://www.wsu.ac.za" target="_blank">Walter Sisulu University</a></p>
+    </footer>
+
+    <script>
+        function filterTech(category, element) {
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+
+            const cards = document.querySelectorAll('.tech-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
